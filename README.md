@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Fitoclone (I will think of a better title at a later date!!)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple CRUD style workout tracker. Currently a work in progress.
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+React/create-react-app
 
-### `npm start`
+### Motivation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Fitocracy is a website for tracking workouts that uses mechanics from both role-playing video games (obtaining points, levelling up, performing quests, obtaining achievements), and social media sites (status updates, liking/commenting on other people's workouts/posts, joining groups). I have been using the website for a number of years, but over time I have become less and less interested in both the gamification and social aspects of it, and have instead been using it as a straight workout tracker. Unfortunately I feel there are a couple of areas where it falls short in this:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. It is quite time-consuming to retrieve old workout data. The site loads your 15 most recent workouts and then when you scroll to the bottom of your feed it loads the next 15 most recent with an AJAX call. I've been using the site for about 7.5 years and at the time of writing have over 1200 workouts, meaning that to view the workouts at the very beginning I have to scroll down on my feed 80+ times.
+2. Fitocracy shows you PRs but it's very basic, it only flags weight-lifting exercises with the highest weight or the furthest distance for cardio exercises. I would like to expand this to show multiple PRs for different reps, and maybe have cardio PRs be speed based over different distances. 
+3. It would be useful to have the ability to make custom workout routines to make tracking workouts quicker. Fitocracy does provide this but it's a premium-only feature. 
 
-### `npm test`
+Furthermore since the site was sold a few years ago, it seems development/maintenance on it is minimal (e.g. the Android app has been deleted from the Google Play store), leading me to believe it won't be around forever.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+My intention is to create a simple CRUD app that will serve as a future-proof replacement to Fitocracy for tracking my own workouts, removing the features I don't use and adding features I would find useful.
