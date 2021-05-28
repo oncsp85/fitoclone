@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import WorkoutSelector from './WorkoutSelector';
 
 const MainView = () => {
 
@@ -214,11 +215,7 @@ const MainView = () => {
 
   return (
     <div className="main-view">
-      {
-        workouts.map(workout => {
-          return (<div key={workout.workout_id}>{JSON.stringify(workout)}</div>);
-        })
-      }
+      <WorkoutSelector oldestDate={ new Date(2012, 8, 4) } />
     </div>
   );
 };

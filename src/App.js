@@ -1,4 +1,3 @@
-import './App.css';
 import MainView from './Components/MainView';
 
 function App() {
