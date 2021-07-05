@@ -214,8 +214,6 @@ const MainView = () => {
     );
   };
 
-
-  console.log(workouts[0]);
   return (
     <div className="main-view">
       <Workout currentWorkout={ workouts[0] } />
