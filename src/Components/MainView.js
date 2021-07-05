@@ -104,6 +104,21 @@ const MainView = () => {
                     { "weight": { "value": 20, "unit": "kg" }, "reps": 10, "set_id": 3 }
                   ],
                 "type": "weights"
+              },
+              {
+                "exercise_id": 6, 
+                "name": "Running", 
+                "sets": 
+                  [
+                    {
+                      "time": 853, 
+                      "distance": 
+                        { "value": 1.5, "unit": "mi" }, 
+                      "avhr": 155, 
+                      "set_id": 0
+                    }
+                  ], 
+                "type": "cardio"
               }
             ]
         },

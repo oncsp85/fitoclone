@@ -1,9 +1,10 @@
 import React from 'react';
 
 const WeightSet = ({ set }) => {
+  const { weight, reps } = set;
   return (
     <div>{ 
-      `${set.weight.value}${set.weight.unit}x${set.reps}`}
+      `${weight.value}${weight.unit} x ${reps} reps`}
     </div>
   );
 };
