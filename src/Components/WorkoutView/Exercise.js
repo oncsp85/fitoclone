@@ -9,7 +9,11 @@ const Exercise = ({ currentExercise }) => {
       { currentExercise.name }
       { 
         currentExercise.sets.map(set =>
-          <Set key={ set.set_id } currentSet={ set } />
+          <Set 
+            key={ set.set_id } 
+            currentSet={ set } 
+            type={ currentExercise.type } 
+          />
         ) 
       }
     </div>
