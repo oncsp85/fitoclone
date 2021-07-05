@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+/* 
+ * Builds a descending list of years from the supplied oldest year to present,
+ * years can be clicked to show a descending list of months, months can be 
+ * clicked to show all workouts from that month
+ */
 const WorkoutSelector = ({ oldestDate }) => {
 
   const today = new Date();
-  const currentYear = today.getFullYear();
-  const currentMonth = today.getMonth();
+  const [currentYear, changeCurrentYear] = useState(today.getFullYear());
+  // Set mostRecentRenderedMonth to the current month if we're currently on the
+  // current year, else set it to December
+  const mostRecentRenderedMonth = 
+    currentYear === today.getFullYear() ? today.getMonth() : 11;
   const oldestYear = oldestDate.getFullYear();
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 
     'July', 'August', 'September', 'October', 'November', 'December'];
   const dateList = [];
 
+  // Method for generating the month list (for a given year)
   const renderMonths = (startMonth, year) => {
     let result = [];
     for (let month = startMonth ; month >= 0 ; month--) {
@@ -18,14 +27,26 @@ const WorkoutSelector = ({ oldestDate }) => {
     return <ul key={ `${year}month-list` }>{ result }</ul>;
   };
 
-  for (let year = currentYear ; year >= oldestYear ; year--) {
-    dateList.push(<li key={ `${year}` }>{ year }</li>);
+  // Generate the year list, adding an event listener to change the current year
+  for (let year = today.getFullYear() ; year >= oldestYear ; year--) {
+    dateList.push(
+      <li 
+        key={ `${year}` } 
+        onClick={ () => changeCurrentYear(year) }>
+          { year }
+        </li>
+    );
+    // When rendering the current year we need to render the month list for it
     if (year === currentYear) {
-      dateList.push(renderMonths(currentMonth, year));
+      dateList.push(renderMonths(mostRecentRenderedMonth, year));
     }
   }
-  console.log(dateList);
+
+
+
   return <ul>{ dateList }</ul>;
 };
+
+
 
 export default WorkoutSelector;
