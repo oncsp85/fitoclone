@@ -216,7 +216,15 @@ const MainView = () => {
 
   return (
     <div className="main-view">
-      <Workout currentWorkout={ workouts[0] } />
+      {
+        workouts.map(workout => {
+          return (
+            <Workout 
+              key={ `${workout.date.$date}_${workout.workout_id}` } 
+              currentWorkout={ workout }
+            />);
+        })
+      }
       {/* <WorkoutSelector oldestDate={ new Date(2012, 8, 4) } /> */}
     </div>
   );
