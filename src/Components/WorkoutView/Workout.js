@@ -14,7 +14,7 @@ const Workout = ({ currentWorkout }) => {
   }
   return(
     <div className="workout">
-      <h2 className="date">{ formatDate(currentWorkout.date.$date) }</h2>
+      <h2 className="date">{ formatDate(currentWorkout.date) }</h2>
       { 
         currentWorkout.exercises.map(exercise => 
           <Exercise key={ exercise.exercise_id } currentExercise={ exercise } />) 
